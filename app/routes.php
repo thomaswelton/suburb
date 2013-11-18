@@ -11,6 +11,11 @@
 |
 */
 
+Route::get('/question2', function()
+{
+	return View::make('question2');
+});
+
 Route::get('/', function()
 {
 	return View::make('hello');
