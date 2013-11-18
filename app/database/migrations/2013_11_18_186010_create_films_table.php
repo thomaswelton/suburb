@@ -25,6 +25,9 @@ class CreateFilmsTable extends Migration {
 			$table->index('director_id');
 			$table->index('genre_id');
 
+			$table->foreign('director_id')->references('id')->on('directors');
+			$table->foreign('genre_id')->references('id')->on('genres');
+
 		});
 	}
 
