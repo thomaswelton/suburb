@@ -17,6 +17,9 @@ class CreateFilmActorsTable extends Migration {
 			$table->integer('actor_id');
 			$table->integer('film_id');
 			$table->timestamps();
+
+			$table->index('actor_id');
+			$table->index('film_id');
 		});
 	}
 
