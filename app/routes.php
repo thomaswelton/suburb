@@ -20,3 +20,11 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::resource('films', 'FilmsController');
+
+Route::resource('directors', 'DirectorsController');
+
+Route::resource('genres', 'GenresController');
+
+Route::resource('actors', 'ActorsController');
