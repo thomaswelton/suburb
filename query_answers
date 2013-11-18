@@ -1,0 +1,13 @@
+Queries
+
+1. A list of actors who were cast in horror films directed by Steven Speilberg
+
+SELECT actors.name FROM actors JOIN film_actors ON actors.id = film_actors.actor_id WHERE film_actors.film_id IN (SELECT films.id FROM films JOIN directors ON films.director_id = directors.id JOIN genres ON films.genre_id = genres.id WHERE directors.name = 'Steven Spielberg' AND genres.name = 'Horror') GROUP BY actors.id
+
+2. The years where more than five films were released in the year.
+
+SELECT films.year FROM films GROUP BY films.year HAVING COUNT(films.year) > 5
+
+3. Genres that have no films in the year 2013.
+
+SELECT * FROM genres WHERE id NOT IN (SELECT genre_id FROM films WHERE `year` = 2013 GROUP BY genre_id)
