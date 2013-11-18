@@ -8,11 +8,13 @@ class GenresTableSeeder extends Seeder {
 		// DB::table('genres')->truncate();
 
 		$genres = array(
-
+			array('name' => 'Action'),
+			array('name' => 'Drama'),
+			array('name' => 'Romance'),
 		);
 
 		// Uncomment the below to run the seeder
-		// DB::table('genres')->insert($genres);
+		DB::table('genres')->insert($genres);
 	}
 
 }
