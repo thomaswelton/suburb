@@ -11,6 +11,7 @@ class GenresTableSeeder extends Seeder {
 			array('name' => 'Action'),
 			array('name' => 'Drama'),
 			array('name' => 'Romance'),
+			array('name' => 'Horror'),
 		);
 
 		// Uncomment the below to run the seeder
